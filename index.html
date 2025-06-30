@@ -1,3 +1,4 @@
+<!-- Save this as index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,105 +7,56 @@
   <title>Casit eSports</title>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Press Start 2P', cursive;
-      background-color: white;
-      color: black;
-    }
+    body { margin: 0; font-family: 'Press Start 2P', cursive; background-color: white; color: black; }
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background: #fff;
-      border-bottom: 3px solid #000;
-      flex-wrap: wrap;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 2rem; background: #fff; border-bottom: 3px solid #000; flex-wrap: wrap;
     }
     .logo { font-size: 1.2rem; font-weight: bold; color: #ff0077; }
     .header-right { display: flex; align-items: center; gap: 15px; }
     .theme-toggle {
-      position: relative;
-      width: 50px;
-      height: 26px;
-      background-color: #000;
-      border-radius: 50px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 4px;
+      position: relative; width: 50px; height: 26px;
+      background-color: #000; border-radius: 50px; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between; padding: 4px;
     }
     .theme-toggle span { font-size: 14px; color: white; }
     .theme-toggle .toggle-circle {
-      position: absolute; top: 3px; left: 3px;
-      width: 20px; height: 20px;
-      background: white;
-      border-radius: 50%;
-      transition: left 0.3s;
+      position: absolute; top: 3px; left: 3px; width: 20px; height: 20px;
+      background: white; border-radius: 50%; transition: left 0.3s;
     }
     body.dark .theme-toggle { background-color: #ff0077; }
     body.dark .theme-toggle .toggle-circle { left: 27px; }
     .instagram-icon { width: 24px; height: 24px; }
     .buttons {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-      padding: 1rem 2rem;
+      display: flex; flex-direction: column; align-items: center; gap: 15px; padding: 1rem 2rem;
     }
     .buttons button {
-      font-family: inherit;
-      padding: 10px 20px;
-      font-size: 0.8rem;
-      background: #ff0077;
-      color: white;
-      border: none;
-      cursor: pointer;
-      width: 150px;
-      border-radius: 12px;
+      font-family: inherit; padding: 10px 20px; font-size: 0.8rem;
+      background: #ff0077; color: white; border: none; cursor: pointer;
+      width: 150px; border-radius: 12px;
     }
     .leaderboard { padding: 1rem 2rem; }
     .leaderboard h2 { text-align: center; font-size: 1rem; }
     .leaderboard table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
+      width: 100%; border-collapse: collapse; margin-top: 10px;
     }
     .leaderboard th, .leaderboard td {
-      padding: 10px;
-      border: 1px solid #000;
-      text-align: left;
-      font-size: 0.7rem;
+      padding: 10px; border: 1px solid #000; text-align: left; font-size: 0.7rem;
     }
     .search-bar { padding: 1rem 2rem; }
     .search-bar input {
-      width: 100%;
-      padding: 10px;
-      font-size: 1rem;
-      border: 2px solid #000;
+      width: 100%; padding: 10px; font-size: 1rem; border: 2px solid #000;
     }
     .tournament-box { padding: 1rem 2rem; }
     .tournament {
-      border: 2px solid #000;
-      padding: 50px;
-      margin-bottom: 30px;
-      font-size: 1.5rem;
-      background-color: #f9f9f9;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
+      border: 2px solid #000; padding: 50px; margin-bottom: 30px;
+      font-size: 1.5rem; background-color: #f9f9f9;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
     }
     .tournament button {
-      font-size: 1rem;
-      padding: 15px 25px;
-      background: #ff0077;
-      color: white;
-      border: none;
-      cursor: pointer;
-      font-family: 'Press Start 2P', cursive;
-      border-radius: 12px;
+      font-size: 1rem; padding: 15px 25px;
+      background: #ff0077; color: white; border: none;
+      cursor: pointer; font-family: 'Press Start 2P', cursive; border-radius: 12px;
     }
     @media (max-width: 600px) {
       header { flex-direction: column; gap: 10px; }
@@ -118,12 +70,12 @@
   <header>
     <div class="logo">Casit eSports</div>
     <div class="header-right">
-      <div class="theme-toggle" onclick="toggleDarkMode()">
+      <div class="theme-toggle" onclick="document.body.classList.toggle('dark')">
         <span>🌞</span>
         <span>🌙</span>
         <div class="toggle-circle"></div>
       </div>
-      <a href="https://instagram.com" target="_blank">
+      <a href="https://www.instagram.com/casit_esports/" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="instagram-icon" />
       </a>
     </div>
@@ -142,6 +94,11 @@
       <tr><td>PlayerOne</td><td>1500</td></tr>
       <tr><td>ShadowWolf</td><td>1200</td></tr>
       <tr><td>Ghost</td><td>980</td></tr>
+      <tr><td>DarkSniper</td><td>920</td></tr>
+      <tr><td>FlareQueen</td><td>880</td></tr>
+      <tr><td>BlazeX</td><td>860</td></tr>
+      <tr><td>IceStorm</td><td>840</td></tr>
+      <tr><td>NovaKing</td><td>820</td></tr>
     </table>
   </div>
 
@@ -150,25 +107,20 @@
   </div>
 
   <div class="tournament-box" id="tournamentBox">
-    <div class="tournament">
-      🎮 Valorant Spring Cup
-      <a href="operators.html"><button>Apply</button></a>
-    </div>
-    <div class="tournament">
-      🔥 CS:GO Masters
-      <a href="operators.html"><button>Apply</button></a>
-    </div>
+    <div class="tournament">🎮 Valorant Spring Cup <a href="operators.html"><button>Apply</button></a></div>
+    <div class="tournament">🔥 CS:GO Masters <a href="operators.html"><button>Apply</button></a></div>
+    <div class="tournament">⚔️ Fortnite Battle Fest <a href="operators.html"><button>Apply</button></a></div>
+    <div class="tournament">🚀 Rocket League Rumble <a href="operators.html"><button>Apply</button></a></div>
+    <div class="tournament">🛡️ Apex Showdown <a href="operators.html"><button>Apply</button></a></div>
+    <div class="tournament">⚙️ Overwatch Clash <a href="operators.html"><button>Apply</button></a></div>
+    <div class="tournament">🔫 PUBG Pro Scrim <a href="operators.html"><button>Apply</button></a></div>
+    <div class="tournament">🧙 Dota 2 Invitational <a href="operators.html"><button>Apply</button></a></div>
   </div>
 
   <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark');
-    }
-
     function scrollToTournaments() {
       document.getElementById('tournamentBox').scrollIntoView({ behavior: 'smooth' });
     }
-
     function filterTournaments() {
       const input = document.getElementById('searchInput').value.toLowerCase();
       const tournaments = document.querySelectorAll('.tournament');
