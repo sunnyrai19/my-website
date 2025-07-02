@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Operators - Casit eSports</title>
+  <title>Operators</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      padding: 2rem;
+      padding: 1rem;
       font-family: 'Press Start 2P', cursive;
       background-color: white;
       color: black;
@@ -18,62 +18,77 @@
       background-color: #111;
       color: white;
     }
-    h1 { text-align: center; font-size: 1rem; }
-    .operator-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
+    h1 {
+      text-align: center;
+      font-size: 1rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
       margin-top: 2rem;
     }
-    .operator-card {
-      border: 2px solid #000;
-      padding: 20px;
-      width: 200px;
+    .card {
+      background: #f2f2f2;
+      padding: 1rem;
       text-align: center;
-      background: #f9f9f9;
+      border: 2px solid #000;
       border-radius: 12px;
+      transition: 0.3s;
     }
-    body.dark .operator-card {
+    body.dark .card {
       background: #222;
       border-color: white;
     }
-    .operator-card img {
+    .card img {
       width: 100px;
       height: 100px;
-      border-radius: 50%;
-      border: 3px solid #ff0077;
       object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 3px solid #ff0077;
     }
-    .operator-card h3 {
+    .card .name {
       font-size: 0.7rem;
-      margin: 10px 0 5px;
+      margin: 0.5rem 0;
     }
-    .operator-card p {
+    .card .id a {
       font-size: 0.6rem;
-      margin: 0;
+      color: #ff0077;
+      text-decoration: none;
+      word-break: break-word;
+    }
+    body.dark .card .id a {
+      color: #00ffaa;
     }
   </style>
 </head>
 <body>
 
-  <h1>Operator Info</h1>
-  <div class="operator-grid">
-    <div class="operator-card"><img src="https://i.pravatar.cc/100?u=1"><h3>Operator Alpha</h3><p>ID: #1001</p></div>
-    <div class="operator-card"><img src="https://i.pravatar.cc/100?u=2"><h3>Operator Bravo</h3><p>ID: #1002</p></div>
-    <div class="operator-card"><img src="https://i.pravatar.cc/100?u=3"><h3>Operator Charlie</h3><p>ID: #1003</p></div>
-    <div class="operator-card"><img src="https://i.pravatar.cc/100?u=4"><h3>Operator Delta</h3><p>ID: #1004</p></div>
-    <div class="operator-card"><img src="https://i.pravatar.cc/100?u=5"><h3>Operator Echo</h3><p>ID: #1005</p></div>
-    <div class="operator-card"><img src="https://i.pravatar.cc/100?u=6"><h3>Operator Foxtrot</h3><p>ID: #1006</p></div>
-  </div>
+  <h1>Select Your Operator</h1>
+
+  <div class="gallery">
+    <div class="card">
+      <img src="q/satyam.jpg" alt="Anime Sniper">
+      <div class="name">satyam_rai_0990</div>
+      <div class="id"><a href="https://www.instagram.com/satyam_rai_0990?utm_source=ig_web_button_share_sheet&igsh=MXZkMzc2NHM2azdwcg==" target="_blank">instagram</a></div>
+    </div>
+  <div class="card">
+      <img src="q/sunny.jpg" alt="Anime Warrior">
+      <div class="name">sunny_rai_19</div>
+      <div class="id"><a href="https://www.instagram.com/sunny_rai_19?utm_source=ig_web_button_share_sheet&igsh=MWl5cXk5dmZ5ZDJwdA==" target="_blank">instagram</a></div>
+    </div>
+  <div class="card">
+      <img src="q/lakshya.jpg" alt="Anime Hacker">
+      <div class="name">iamdevil5323</div>
+      <div class="id"><a href="https://www.instagram.com/iamdevil5323?utm_source=ig_web_button_share_sheet&igsh=MWg0OWJrNXdrbWE5dw==" target="_blank">instagram</a></div>
+    </div>
 
   <script>
-    // Apply dark mode if previously enabled
-    window.addEventListener('DOMContentLoaded', () => {
-      if (localStorage.getItem('darkMode') === 'on') {
-        document.body.classList.add('dark');
-      }
-    });
+    // Apply dark mode if selected on main page
+    if (localStorage.getItem('darkMode') === 'on') {
+      document.body.classList.add('dark');
+    }
   </script>
 
 </body>
