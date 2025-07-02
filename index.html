@@ -13,76 +13,169 @@
       color: black;
       transition: 0.3s;
     }
-    body.dark { background-color: #111; color: white; }
+    body.dark {
+      background-color: #111;
+      color: white;
+    }
     header {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 1rem 2rem; background: #fff; border-bottom: 3px solid #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #fff;
+      border-bottom: 3px solid #000;
+      flex-wrap: wrap;
     }
-    body.dark header { background: #222; border-color: white; }
-    .logo { font-size: 1.2rem; font-weight: bold; color: #ff0077; }
-    .header-right { display: flex; align-items: center; gap: 15px; }
+    body.dark header {
+      background: #222;
+      border-color: white;
+    }
+    .logo {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #ff0077;
+    }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
     .theme-toggle {
-      position: relative; width: 50px; height: 26px; background-color: #000;
-      border-radius: 50px; cursor: pointer; display: flex;
-      align-items: center; justify-content: space-between; padding: 4px;
+      position: relative;
+      width: 50px;
+      height: 26px;
+      background-color: #000;
+      border-radius: 50px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4px;
     }
-    .theme-toggle span { font-size: 14px; color: white; }
+    .theme-toggle span {
+      font-size: 14px;
+      color: white;
+    }
     .theme-toggle .toggle-circle {
-      position: absolute; top: 3px; left: 3px;
-      width: 20px; height: 20px; background: white;
-      border-radius: 50%; transition: left 0.3s;
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 20px;
+      height: 20px;
+      background: white;
+      border-radius: 50%;
+      transition: left 0.3s;
     }
-    body.dark .theme-toggle { background-color: #ff0077; }
-    body.dark .theme-toggle .toggle-circle { left: 27px; }
-    .instagram-icon { width: 24px; height: 24px; }
+    body.dark .theme-toggle {
+      background-color: #ff0077;
+    }
+    body.dark .theme-toggle .toggle-circle {
+      left: 27px;
+    }
+    .instagram-icon {
+      width: 24px;
+      height: 24px;
+    }
     .buttons {
-      display: flex; flex-direction: column;
-      align-items: center; gap: 15px; padding: 1rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      padding: 1rem 2rem;
     }
     .buttons button {
-      font-family: inherit; padding: 10px 20px; font-size: 0.8rem;
-      background: #ff0077; color: white; border: none;
-      cursor: pointer; width: 150px; border-radius: 12px;
+      font-family: inherit;
+      padding: 10px 20px;
+      font-size: 0.8rem;
+      background: #ff0077;
+      color: white;
+      border: none;
+      cursor: pointer;
+      width: 150px;
+      border-radius: 12px;
     }
-    .leaderboard { padding: 1rem 2rem; }
-    .leaderboard h2 { text-align: center; font-size: 1rem; }
+    .leaderboard {
+      padding: 1rem 2rem;
+    }
+    .leaderboard h2 {
+      text-align: center;
+      font-size: 1rem;
+    }
     .leaderboard table {
-      width: 100%; border-collapse: collapse; margin-top: 10px;
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
     }
     .leaderboard th, .leaderboard td {
-      padding: 10px; border: 1px solid #000;
-      text-align: left; font-size: 0.7rem;
+      padding: 10px;
+      border: 1px solid #000;
+      text-align: left;
+      font-size: 0.7rem;
     }
     body.dark .leaderboard th, body.dark .leaderboard td {
       border-color: white;
     }
-    .search-bar { padding: 1rem 2rem; }
+    .search-bar {
+      padding: 1rem 2rem;
+    }
     .search-bar input {
-      width: 100%; padding: 10px; font-size: 1rem;
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
       border: 2px solid #000;
     }
     body.dark .search-bar input {
-      background-color: #222; color: white; border-color: white;
+      background-color: #222;
+      color: white;
+      border-color: white;
     }
-    .tournament-box { padding: 1rem 2rem; }
+    .tournament-box {
+      padding: 1rem 2rem;
+    }
     .tournament {
-      border: 2px solid #000; padding: 50px; margin-bottom: 30px;
-      font-size: 1.5rem; background-color: #f9f9f9;
-      display: flex; justify-content: space-between; align-items: center;
-      flex-wrap: wrap;
+      border: 2px solid #000;
+      padding: 75px; /* 1.5x size */
+      margin-bottom: 30px;
+      font-size: 1.3rem; /* 1.5x size */
+      background-color: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
     body.dark .tournament {
-      background-color: #222; border-color: white;
+      background-color: #222;
+      border-color: white;
+    }
+    .tournament p {
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+    .tournament .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
     }
     .tournament button {
-      font-size: 1rem; padding: 15px 25px; background: #ff0077;
-      color: white; border: none; cursor: pointer;
-      font-family: 'Press Start 2P', cursive; border-radius: 12px;
+      font-size: 1rem;
+      padding: 12px 24px;
+      background: #ff0077;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-family: 'Press Start 2P', cursive;
+      border-radius: 12px;
+    }
+    .countdown {
+      font-size: 1.2rem;
+      color: #ff0077;
+    }
+    body.dark .countdown {
+      color: #00ffaa;
     }
     @media (max-width: 600px) {
       header { flex-direction: column; gap: 10px; }
       .buttons button { width: 100%; }
-      .tournament { flex-direction: column; gap: 20px; text-align: center; }
     }
   </style>
 </head>
@@ -110,45 +203,105 @@
   <div class="leaderboard">
     <h2>Leaderboard</h2>
     <table>
-      <tr><th>Player</th><th>Points</th></tr>
-      <tr><td>PlayerOne</td><td>1500</td></tr>
-      <tr><td>ShadowWolf</td><td>1200</td></tr>
-      <tr><td>Ghost</td><td>980</td></tr>
-      <tr><td>DarkSniper</td><td>920</td></tr>
-      <tr><td>FlareQueen</td><td>880</td></tr>
+      <tr><th>Player</th><th>game win</th></tr>
+      <tr><td>sunny_rai_19</td><td>50</td></tr>
+      <tr><td>satyam_rai_0990</td><td>49</td></tr>
+      <tr><td>mohitrai_896</td><td>45</td></tr>
+      <tr><td>iamdevil5323</td><td>42</td></tr>
+      <tr><td>rai_dhiraj_1</td><td>41</td></tr>
       <tr><td>BlazeX</td><td>860</td></tr>
       <tr><td>IceStorm</td><td>840</td></tr>
       <tr><td>NovaKing</td><td>820</td></tr>
     </table>
   </div>
 
+
   <div class="search-bar">
     <input type="text" id="searchInput" onkeyup="filterTournaments()" placeholder="Search tournaments..." />
   </div>
 
   <div class="tournament-box" id="tournamentBox">
-    <div class="tournament">🎮 Valorant Spring Cup <a href="operators.html"><button>Apply</button></a></div>
-    <div class="tournament">🔥 CS:GO Masters <a href="operators.html"><button>Apply</button></a></div>
-    <div class="tournament">⚔️ Fortnite Battle Fest <a href="operators.html"><button>Apply</button></a></div>
-    <div class="tournament">🚀 Rocket League Rumble <a href="operators.html"><button>Apply</button></a></div>
-    <div class="tournament">🛡️ Apex Showdown <a href="operators.html"><button>Apply</button></a></div>
-    <div class="tournament">⚙️ Overwatch Clash <a href="operators.html"><button>Apply</button></a></div>
-    <div class="tournament">🔫 PUBG Pro Scrim <a href="operators.html"><button>Apply</button></a></div>
-    <div class="tournament">🧙 Dota 2 Invitational <a href="operators.html"><button>Apply</button></a></div>
+    <div class="tournament">
+      🎮 Free Fire casit final<span id="sundayTimer" class="countdown"></span>
+      <p>[Join-ticket/Rs25] [Win-Rs100]</p>
+      <div class="button-group">
+        <button onclick="copyText('@234567')">Copy Text</button>
+        <a href="operators.html"><button>Apply</button></a>
+      </div>
+    </div>
+
+    <div class="tournament">
+      🔥 Free Fire test<span id="saturdayTimer" class="countdown"></span>
+      <p>[Join-free] [Win-ticket]</p>
+      <div class="button-group">
+        <button onclick="copyText('@234567')">Copy Text</button>
+        <a href="operators.html"><button>Apply</button></a>
+      </div>
+    </div>
+
+    <div class="tournament">
+      ⚔️ Fortnite Battle Fest
+      <p>Outlast and outbuild your opponents in this high-stakes Fortnite event.</p>
+      <div class="button-group">
+        <button onclick="copyText('@234567')">Copy Text</button>
+        <a href="operators.html"><button>Apply</button></a>
+      </div>
+    </div>
+
+    <div class="tournament">
+      🚀 Rocket League Rumble
+      <p>Compete in high-flying car soccer battles in Rocket League Rumble.</p>
+      <div class="button-group">
+        <button onclick="copyText('@234567')">Copy Text</button>
+        <a href="operators.html"><button>Apply</button></a>
+      </div>
+    </div>
   </div>
 
   <script>
-    // Dark mode logic
     function toggleDarkMode() {
       document.body.classList.toggle('dark');
       localStorage.setItem('darkMode', document.body.classList.contains('dark') ? 'on' : 'off');
     }
 
-    // On load, apply stored theme
     window.addEventListener('DOMContentLoaded', () => {
       if (localStorage.getItem('darkMode') === 'on') {
         document.body.classList.add('dark');
       }
+
+      const getNextDayOfWeek = (dayName) => {
+        const today = new Date();
+        const days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+        const target = days.indexOf(dayName.toLowerCase());
+        const now = today.getDay();
+        let addDays = (target + 7 - now) % 7;
+        if (addDays === 0) addDays = 7;
+        const result = new Date(today);
+        result.setDate(today.getDate() + addDays);
+        result.setHours(0, 0, 0, 0);
+        return result;
+      };
+
+      const startCountdown = (id, date) => {
+        function update() {
+          const now = new Date();
+          const diff = date - now;
+          if (diff <= 0) {
+            document.getElementById(id).textContent = ' ⏰ Live!';
+            return;
+          }
+          const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+          const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+          const m = Math.floor((diff / (1000 * 60)) % 60);
+          const s = Math.floor((diff / 1000) % 60);
+          document.getElementById(id).textContent = ` - ${d}d ${h}h ${m}m ${s}s`;
+        }
+        update();
+        setInterval(update, 1000);
+      };
+
+      startCountdown("sundayTimer", getNextDayOfWeek("sunday"));
+      startCountdown("saturdayTimer", getNextDayOfWeek("saturday"));
     });
 
     function scrollToTournaments() {
@@ -160,6 +313,14 @@
       const tournaments = document.querySelectorAll('.tournament');
       tournaments.forEach(t => {
         t.style.display = t.textContent.toLowerCase().includes(input) ? '' : 'none';
+      });
+    }
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert(`Copied: ${text}`);
+      }).catch(() => {
+        alert('Copy failed. Try again.');
       });
     }
   </script>
